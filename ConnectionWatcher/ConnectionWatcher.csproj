@@ -113,9 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StackExchange.Redis_Net45\StackExchange.Redis_Net45.csproj">
+    <ProjectReference Include="..\StackExchange.Redis\StackExchange.Redis.csproj">
       <Project>{7cec07f2-8c03-4c42-b048-738b215824c1}</Project>
-      <Name>StackExchange.Redis_Net45</Name>
+      <Name>StackExchange.Redis</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
