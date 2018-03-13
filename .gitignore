@@ -21,3 +21,4 @@ StackExchange.Redis.*.zip
 *.lock.json
 packages/
 StackExchange.Redis.Tests/*Config.json
+paket.exe
