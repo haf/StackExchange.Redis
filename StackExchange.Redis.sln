@@ -11,7 +11,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3AD17044-6BFF-4750-9AC2-2CA466375F2A}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
-		Directory.build.props = Directory.build.props
+		.travis.yml = .travis.yml
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
