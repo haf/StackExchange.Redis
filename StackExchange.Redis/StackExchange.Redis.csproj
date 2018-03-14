@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>$(LibraryTargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
     <Description>High performance Redis client, incorporating both synchronous and asynchronous usage.</Description>
     <AssemblyTitle>StackExchange.Redis</AssemblyTitle>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -10,15 +10,19 @@
     <PackageTags>Async;Redis;Cache;PubSub;Messaging</PackageTags>
     <OutputTypeEx>Library</OutputTypeEx>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' OR '$(TargetFramework)' == 'net46' ">
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net461' ">
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
-  <PropertyGroup Condition="  '$(TargetFramework)' == 'net461'">
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net46' OR '$(TargetFramework)' == 'net461'">
     <DefineConstants>$(DefineConstants);FEATURE_SERIALIZATION;FEATURE_SOCKET_MODE_POLL;FEATURE_PERFCOUNTER;FEATURE_THREADPOOL</DefineConstants>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <DefineConstants>$(DefineConstants);FEATURE_SERIALIZATION;FEATURE_THREADPOOL</DefineConstants>
   </PropertyGroup>
+
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
